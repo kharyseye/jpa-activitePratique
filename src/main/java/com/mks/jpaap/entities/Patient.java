@@ -36,6 +36,26 @@ public class Patient {
         return dateNaissance;
     }
 
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public void setMalade(boolean malade) {
+        this.malade = malade;
+    }
+
+    public void setDateNaissance(Date dateNaissance) {
+        this.dateNaissance = dateNaissance;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getNom() {
         return nom;
     }
