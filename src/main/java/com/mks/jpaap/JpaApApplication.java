@@ -56,6 +56,17 @@ public class JpaApApplication implements CommandLineRunner {
             System.out.println(p.isMalade());
         });
 
+        System.out.println("**********List des patients par nom et score**********");
+        //affichage de la liste des patients par nom et par scoremin
+        List<Patient> patientlist = patientRepository.chercherPatientParNometScore("%h%", 40);
+        patientlist.forEach(p->{
+            System.out.println(p.getId());
+            System.out.println(p.getNom());
+            System.out.println(p.getDateNaissance());
+            System.out.println(p.getScore());
+            System.out.println(p.isMalade());
+        });
+
         System.out.println("* * * * * * * * * * *PATIENT AVEC ID = 1 * * * * * * * * * * *");
         Patient patient = patientRepository.findById(2L).orElseThrow(()->new RuntimeException("Patient not found"));
         if (patient != null){
